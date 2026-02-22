@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
             return res.status(404).json("NO ACCOUNT");
         }
         if (!email || !password) {
-            return res.status(400).json({ msg: "FIELDS REQUIRED" })
+            return res.status(400).json({ msg: " BOTH FIELDS REQUIRED" })
         }
         const isMatch = await bcryptjs.compare(password, isPresent.password);
         if (!isMatch) {
